@@ -1,35 +1,43 @@
-<footer class="gh-footer{{#match @custom.header_and_footer_color "Accent color"}} has-accent-color{{/match}} gh-outer">
-    <div class="gh-footer-inner gh-inner">
-
-        <div class="gh-footer-bar">
-            <span class="gh-footer-logo is-title">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}">
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </span>
-            <nav class="gh-footer-menu">
-                {{navigation type="secondary"}}
-            </nav>
-            <div class="gh-footer-copyright">
-                Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+<footer class="footer">
+    <div class="radial-blue-decor-footer"></div>
+    <div class="g--padding-120-32-16px">
+        <div class="g--main-maxw-1200px">
+            <div class="footer-content">
+                <div class="footer-content-body">
+                    <div class="item-footer-grid max-264px"><a href="#" class="link-brand w-inline-block"><img
+                                src="{{@site.logo}}"
+                                loading="lazy" alt="" class="image-brand"></a>
+                        <ul role="list" class="list-footer">
+                            <li class="list-footer-item">
+                                <p class="g--text-light-14px">GoodMora Ltd is Registered in England &amp;
+                                    Wales.<br><br>Company Number 16143916.<br><br>167-169 Great Portland Street, 5th
+                                    Floor, London, United Kingdom, W1W 5PF</p>
+                            </li>
+                            <li class="list-footer-item">
+                                <p class="g--text-light-14px"></p>
+                            </li>
+                            <li class="list-footer-item">
+                                <p class="g--text-light-14px"></p>
+                            </li>
+                        </ul>
+                        <p class="g--text-light-14px">GoodMora is part of the Goodfolio family. Building AI tech for
+                            good.</p>
+                        <ul role="list" class="list-footer">
+                            <li class="list-footer-item">
+                                <p class="g--text-light-14px">hello@goodmora.ai</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-footer-grid aligh-right"></div>
+                    <div class="item-footer-grid aligh-right"><a data-w-id="8293997a-9cd5-e643-0f8b-c86b7d243ecd"
+                            href="/download" class="button-cta default w-inline-block">
+                            <div class="t--current-text">whitepaper</div>
+                        </a></div>
+                </div>
+                <div class="footer-content-bottom">
+                    <p class="g--text-light-14px">© {{date format="YYYY"}} {{@site.title}}</p>
+                </div>
             </div>
         </div>
-
-        {{#if @site.members_enabled}}
-            {{#unless @member}}
-                <section class="gh-footer-signup">
-                    <h2 class="gh-footer-signup-header is-title">
-                        {{#if @custom.signup_heading}}{{@custom.signup_heading}}{{else}}{{@site.title}}{{/if}}
-                    </h2>
-                    <p class="gh-footer-signup-subhead is-body">
-                        {{#if @custom.signup_subheading}}{{@custom.signup_subheading}}{{else}}{{@site.description}}{{/if}}
-                    </p>
-                    {{> "email-subscription" email_field_id="footer-email"}}
-                </section>
-            {{/unless}}
-        {{/if}}
-
     </div>
 </footer>
