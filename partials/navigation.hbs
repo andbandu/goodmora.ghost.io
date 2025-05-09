@@ -1,0 +1,25 @@
+{{#if isSecondary}}
+    <ul class="nav" role="menu">
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}" role="menuitem">
+                <a href="{{url}}">
+                    <svg class="icon" role="img" aria-label="{{slug}} icon">
+                        <title>{{slug}}</title>
+                        <use xlink:href="#{{slug}}"></use>
+                    </svg>
+                </a>
+            </li>
+        {{/foreach}}
+    </ul>
+{{else}}
+    <nav role="navigation" class="nav-menu w-nav-menu">
+                        <div class="nav-menu-wrapper">
+                            {{#foreach navigation}}
+                                <a href="{{url absolute="true"}}"
+                                    class="nav-menu-link w-inline-block {{link_class for=(url) class=(concat "nav-" slug)}}">
+                                    <div class="t--current-text">{{label}}</div>
+                                </a>
+                             {{/foreach}}
+                        </div>
+    </nav>
+{{/if}}
